@@ -1,0 +1,7 @@
+group 'ktor-test'
+version '0.0.1'
+
+repositories {
+    mavenLocal()
+    jcenter()
+}
