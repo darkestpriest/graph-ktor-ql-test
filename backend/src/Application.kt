@@ -8,7 +8,7 @@ import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
 fun main() {
-    val server = embeddedServer(Netty, port = 8080) {
+    val server = embeddedServer(Netty, System.getenv("port").toInt()) {
         routing {
             get("/echo/{message}") {
                 call.respond("Echoing: " + call.parameters["message"])
