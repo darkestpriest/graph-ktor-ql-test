@@ -1,4 +1,4 @@
-package com.darkest
+package backend
 
 import io.ktor.application.*
 import io.ktor.response.*
@@ -15,6 +15,6 @@ fun main() {
             }
         }
     }
+    DatabaseFactory.init()
     server.start(wait = true)
 }
-
